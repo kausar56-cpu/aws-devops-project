@@ -1,1 +1,14 @@
+const express = require("express"); // Import the Express library
+const app = express(); // Create an Express application
+
+// Define a route for the root URL ('/')
+app.get("/", (req, res) => {
+  res.send("Hello from Microservice"); // Send a response to the client
+});
+
+// Set the port for the application
+const PORT = 3000;
+
+// Start the application and listen for requests
+app.listen(PORT, () => console.log(`Running on port ${PORT}`)); // Log the server start message
 
